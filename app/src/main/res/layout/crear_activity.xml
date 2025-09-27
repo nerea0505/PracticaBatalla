@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Crear nuevo personaje"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/editNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="234dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:hint="Introduce el nombre del personaje"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+        <!-- Contenedor de Vida -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="70dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editNombre">
+
+        <Button
+            android:id="@+id/btnRestarVida"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/txtVida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="70"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSumarVida"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+" />
+    </LinearLayout>
+
+        <!-- Contenedor de Ataque -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="70dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="NotSibling"
+        tools:layout_editor_absoluteX="70dp">
+
+        <Button
+            android:id="@+id/btnRestarAtaque"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/txtAtaque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="30"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSumarAtaque"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtFechaSeleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:hint="Fecha de nacimiento del personaje"
+        android:textSize="16sp"
+        android:focusable="false"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Limpiar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFechaSeleccionada" />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFechaSeleccionada" />
+
+    <TextView
+        android:id="@+id/txtVidaPersonaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vida del personaje"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
+
+    <TextView
+        android:id="@+id/txtAtaquePersonaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ataque del personaje"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

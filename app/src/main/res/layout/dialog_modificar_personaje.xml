@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/editAtaque"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nuevo ataque"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editVida"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nueva vida"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtFechaDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha de nacimiento"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnSeleccionarFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha" />
+
+</LinearLayout>
